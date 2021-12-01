@@ -340,7 +340,10 @@ $(async function(){
 $('.popCont').slideToggle('fast')
 $('.bg-pop').hide();
 await setText();
-$('#spinner').append(Svg());
+let jsx = Svg();
+$(jsx).insertBefore('.txtBox')
+// $('#spinner').append(Svg());
+// Svg().insertBefore('.txtBox');
 clickFunc();
 
 

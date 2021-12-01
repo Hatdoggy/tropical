@@ -12,13 +12,15 @@
   .logo {
     width: 80% !important;
     left: 10% !important;
-    top: 5% !important;
+    top: 2% !important;
   }
   small {
     width: 100% !important;
   }
   svg {
     width: 100% !important;
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
   }
   .txtBox {
     height: 45% !important;
@@ -711,6 +713,7 @@ small {
 
 .pl-bl {
   position: absolute;
+  left: 0;
   bottom: 0;
 }
 
