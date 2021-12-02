@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Mountains+of+Christmas:wght@700&display=swap");
 @media screen and (max-width: 1000px) {
   .contCont {
     width: 80% !important;
@@ -464,8 +464,13 @@
 .bg-img {
   background-image: url("../img/bg.png");
   background-size: cover;
-  background-repeat: repeat;
-  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bg-img2 {
+  background-image: url("../img/cat/bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .bg-drk {
@@ -653,6 +658,11 @@ span {
 .mont-blk {
   font-family: "Montserrat", sans-serif;
   font-weight: 900;
+}
+
+.chrst {
+  font-family: "Mountains of Christmas", cursive;
+  font-weight: 700;
 }
 
 .bot {
