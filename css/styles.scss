@@ -36,7 +36,7 @@ svg{
 .bg-pop{
     .bg-lght{
         border-radius: 15px!important;
-        img{
+        img#popLogo{
             position: absolute;
             top: 5%;
         }
@@ -294,18 +294,18 @@ small {
       transform: rotate(3109deg);
     }
     90% {
-      -webkit-transform: rotate(6310deg);
-      -ms-transform: rotate(6310deg);
-      transform: rotate(6310deg);
+      -webkit-transform: rotate(7210deg);
+      -ms-transform: rotate(7210deg);
+      transform: rotate(7210deg);
     }
     95% {
-      -webkit-transform: rotate(6299deg);
-      -ms-transform: rotate(6299deg);
-      transform: rotate(6299deg);
+      -webkit-transform: rotate(7199deg);
+      -ms-transform: rotate(7199deg);
+      transform: rotate(7199deg);
     }
     100% {
-      -webkit-transform: rotate(6300deg);
-      -ms-transform: rotate(6300deg);
-      transform: rotate(6300deg);
+      -webkit-transform: rotate(7200deg);
+      -ms-transform: rotate(7200deg);
+      transform: rotate(7200deg);
     }
   }

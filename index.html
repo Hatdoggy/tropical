@@ -9,49 +9,53 @@
     <script src="./js/main.js" defer></script>
     <title>Tropical Spinner</title>
 </head>
-<body class="bg-img h-vh ovr-hide pos-rel flx">
-    <img src="./img/logo.png" class="w-15 logo z-top" alt="logo"/>
+<body class="bg-img2 h-vh ovr-hide pos-rel flx flx-jc-ce">
+    <img src="./img/cat/logo.png" class="w-15 logo z-top" alt="logo"/>
 
     <!-- <section id="spinner" class="w-100 flx flx-cent"></section> -->
     <section class="txtBox bg-lght flx flx-col flx-jc-sp flx-ai-ce w-100 h-50 pos-rel">
         <!-- User Stats -->
         <div class="flx flx-cent w-50 contCont">
             <div class="w-35 flx flx-cent cont">
-                <h4 class="txt-drk mont-bld" id="balance">Balance:</h4>
-                <h4 class="txt-wht mont-bld m-l-auto balVal" id="balVal">$250</h4>
+                <h4 class="txt-drk chrst" id="balance">Balance:</h4>
+                <h4 class="txt-drk mont-bld m-l-auto balVal" id="balVal">$250</h4>
             </div>
             <div class="w-35 flx flx-cent m-l-auto cont">
-                <h4 class="txt-drk mont-bld" id="spin">Spins:</h4>
-                <h4 class="txt-wht mont-bld m-l-auto spinVal" id="spinVal">3</h4>
+                <h4 class="txt-drk chrst" id="spin">Spins:</h4>
+                <h4 class="txt-drk mont-bld m-l-auto spinVal" id="spinVal">3</h4>
             </div>
         </div>
 
         <!-- Spin Button -->
-        <button class="btn btn-drk w-30 mont-bld p-20 pulse product-button" data-product-id="1" id="spinB">SPIN THE WHEEL</button>
+        <button class="btn btn-drk w-30 chrst p-20 pulse product-button" data-product-id="1" id="spinB">SPIN THE WHEEL</button>
 
         <!-- Terms Btn -->
         <small class="terms txt-drk mont-reg z-top w-50 txt-al-ce">This is a advertisement page done by a third party advertiser and NOT the casino promoted. You must be 18 or older (or the legal age of gambling in your state) to use our page. Also you must accept we use cookies to enrich your experience.</small>
     </section>
 
     <!-- Plant svg insert here -->
-    <img src="./img/plnt-bl.png" class="w-30 pl-bl z-top"/>
-    <img src="./img/plnt-br.png" class="w-30 pl-br z-top"/>
+    <img src="./img/cat/plnt-bl.png" class="w-30 pl-bl z-top"/>
+    <img src="./img/cat/plnt-br.png" class="w-30 pl-br z-top"/>
 
     <div class="bg-pop">
-        <div class="bg-lght p-20 w-30 h-30 flx flx-col flx-ai-ce pos-rel popCont">
-            <img src="./img/lucky.png" class="w-10 lucky" alt="lucky"/>
-            <h1 class="txt-al-ce txt-drk mont-blk w-50" id="win">YOU WON!</h1>
-            <h1 class="txt-al-ce txt-drk mont-blk w-50" id="lose">YOU LOST</h1>
-            <div class="flx flx-cent w-100 contCont">
+        <div class="bg-lght p-20 w-30 h-50 flx flx-col flx-jc-sa flx-ai-ce pos-rel popCont">
+            <img src="./img/lucky.png" class="w-10 lucky" alt="lucky" id="popLogo"/>
+
+            <img src="./img/cat/-50.png" alt="lose" class="w-50" id="cat"/>
+            <h2 class="txt-al-ce txt-drk mont-blk" id="win">YOU WON!</h2>
+            <h2 class="txt-al-ce txt-drk mont-blk" id="lose">YOU LOST</h2>
+
+            <div class="flx flx-cent w-80 contCont">
                 <div class="w-35 flx flx-cent cont">
-                    <p class="txt-drk mont-bld" id="balance">Balance:</p>
-                    <p class="txt-wht mont-bld m-l-auto balVal" id="balVal">$250</p>
+                    <p class="txt-drk chrst" id="balance">Balance:</p>
+                    <p class="txt-drk mont-bld m-l-auto balVal" id="balVal">$250</p>
                 </div>
                 <div class="w-35 flx flx-cent m-l-auto cont">
-                    <p class="txt-drk mont-bld" id="spin">Spins:</p>
-                    <p class="txt-wht mont-bld m-l-auto spinVal" id="spinVal">3</p>
+                    <p class="txt-drk chrst" id="spin">Spins:</p>
+                    <p class="txt-drk mont-bld m-l-auto spinVal" id="spinVal">3</p>
                 </div>
             </div>
+
         </div>
     </div>
 </body>

@@ -42,8 +42,14 @@
         .popCont{
             width: 80%!important;
             justify-content: center;
-            img{
+            h2{
+                width: 100%!important;
+            }
+            img#popLogo{
                 width: 15%!important;
+            }
+            img#cat{
+                width: 80%!important;
             }
         }
     }
