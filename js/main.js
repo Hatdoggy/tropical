@@ -312,14 +312,17 @@ const clickFunc = ()=>{
       
       if(count-1 === 1){
         $("#win").hide();
+        $("#lose").text('YOU LOST $50');
         $("#lose").show();
       }else{
         $("#lose").hide();
+        $("#win").text("YOU WON $100");
         $("#win").show();
         if(count-1 === 3){
           $('#win').text('JACKPOT!')
           $('#win').removeClass('w-50');
           $('#win').addClass('w-100')
+          $('#win').text('JACKPOT $1500 + 100 spins')
           $("#spinB").text('CLAIM REWARDS')
           newClick();
         }

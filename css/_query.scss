@@ -1,4 +1,5 @@
 @media screen and (max-width:1000px) {
+
     .contCont{
         width: 80%!important;
         .cont{
@@ -13,7 +14,7 @@
     .logo{
         width: 80%!important;
         left: 10%!important;
-        top: 5%!important;
+        top: 2%!important;
     }
 
     small{
@@ -22,10 +23,11 @@
 
     svg{
         width: 100%!important;
+        transform: scale(1.5);
     }
 
     .txtBox{
-        height: 45%!important;
+        height: 50%!important;
     }
 
     .lucky{
