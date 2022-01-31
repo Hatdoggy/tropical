@@ -12,7 +12,7 @@
     }
 
     .logo{
-        width: 80%!important;
+        width: 20%!important;
         left: 10%!important;
         top: 2%!important;
     }
@@ -40,11 +40,20 @@
 
     .bg-pop{
         .popCont{
-            width: 80%!important;
-            justify-content: center;
-            img{
-                width: 15%!important;
+            width: 95%!important;
+            .lucky{
+                width: 25%!important;
+            }
+            img.reward{
+                width: 50%!important;
             }
         }
     }
+
+    .spinner{
+        width: 135%!important;
+    }
+    .top{
+        width: 15%!important;
+      }
 }

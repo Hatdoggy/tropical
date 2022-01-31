@@ -71,6 +71,9 @@
 	&-50{
 		width: 50%;
 	}
+	&-45{
+		width: 45%;
+	}
     &-35{
 		width: 35%;
 	}
@@ -85,6 +88,9 @@
 	}
 	&-10{
 		width: 10%;
+	}
+	&-5{
+		width: 5%;
 	}
 	&-auto{
 		width: auto;
@@ -328,6 +334,10 @@
         background-color: $drk;
         color: white;
     }
+	&-grad{
+		background: $grad2;
+		color: white;
+	}
     &:hover{
         transform:scale(1.1);
         cursor: pointer;
@@ -341,11 +351,14 @@
 /* background */
 .bg{
     &-img{
-        background-image: url('../img/bg.png');
+        background-image: url('../imgVeg/bg.jpg');
         background-size: cover;
         background-repeat: repeat;
         background-position: center;
     }
+	&-grad1{
+		background:$grad1;
+	}
     &-drk{
         background-color: $drk;
         border-radius: 15px;
@@ -356,8 +369,12 @@
         color: $drk;
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
     }
+	&-grad2{
+		// background: $grad3;
+		// border-radius: 15px;
+	}
     &-pop{
-        background: rgba(48, 48, 48, 0.25);
+        background: rgba(0, 0, 0, 0.75);
         z-index: 55;
         position: absolute;
         width: 100%;

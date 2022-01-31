@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amarante&family=Lato:wght@300&display=swap");
 @media screen and (max-width: 1000px) {
   .contCont {
     width: 80% !important;
@@ -10,7 +10,7 @@
     width: 80% !important;
   }
   .logo {
-    width: 80% !important;
+    width: 20% !important;
     left: 10% !important;
     top: 2% !important;
   }
@@ -32,12 +32,18 @@
     width: 50%;
   }
   .bg-pop .popCont {
-    width: 80% !important;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    width: 95% !important;
   }
-  .bg-pop .popCont img {
+  .bg-pop .popCont .lucky {
+    width: 25% !important;
+  }
+  .bg-pop .popCont img.reward {
+    width: 50% !important;
+  }
+  .spinner {
+    width: 135% !important;
+  }
+  .top {
     width: 15% !important;
   }
 }
@@ -150,6 +156,10 @@
   width: 50%;
 }
 
+.w-45 {
+  width: 45%;
+}
+
 .w-35 {
   width: 35%;
 }
@@ -168,6 +178,10 @@
 
 .w-10 {
   width: 10%;
+}
+
+.w-5 {
+  width: 5%;
 }
 
 .w-auto {
@@ -449,6 +463,11 @@
   color: white;
 }
 
+.btn-grad {
+  background: linear-gradient(268.93deg, #D735FF 0.02%, #8730C4 48.42%, #322A86 99.95%);
+  color: white;
+}
+
 .btn:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
@@ -462,10 +481,14 @@
 
 /* background */
 .bg-img {
-  background-image: url("../img/bg.png");
+  background-image: url("../imgVeg/bg.jpg");
   background-size: cover;
   background-repeat: repeat;
   background-position: center;
+}
+
+.bg-grad1 {
+  background: linear-gradient(91.75deg, #941EF1 0%, #421985 100%);
 }
 
 .bg-drk {
@@ -483,7 +506,7 @@
 }
 
 .bg-pop {
-  background: rgba(48, 48, 48, 0.25);
+  background: rgba(0, 0, 0, 0.75);
   z-index: 55;
   position: absolute;
   width: 100%;
@@ -640,23 +663,28 @@ span {
 }
 
 /* font style */
-.mont-reg {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
+.ama {
+  font-family: "Amarante", cursive;
 }
 
-.mont-bld {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-}
-
-.mont-blk {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 900;
+.lato {
+  font-family: "Lato", sans-serif;
 }
 
 .bot {
   bottom: 0;
+}
+
+.top {
+  width: 5%;
+  z-index: 2;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+.spinner {
+  -webkit-animation: down .5s;
+          animation: down .5s;
 }
 
 svg {
@@ -828,16 +856,16 @@ small {
     transform: rotate(3109deg);
   }
   90% {
-    -webkit-transform: rotate(6314deg);
-    transform: rotate(6314deg);
+    -webkit-transform: rotate(5095deg);
+    transform: rotate(5095deg);
   }
   95% {
-    -webkit-transform: rotate(6312deg);
-    transform: rotate(6312deg);
+    -webkit-transform: rotate(5084deg);
+    transform: rotate(5084deg);
   }
   100% {
-    -webkit-transform: rotate(6313deg);
-    transform: rotate(6313deg);
+    -webkit-transform: rotate(5085deg);
+    transform: rotate(5085deg);
   }
 }
 
@@ -859,16 +887,78 @@ small {
     transform: rotate(0deg);
   }
   90% {
-    -webkit-transform: rotate(1805deg);
-    transform: rotate(1805deg);
+    -webkit-transform: rotate(5600deg);
+    transform: rotate(5600deg);
   }
   95% {
-    -webkit-transform: rotate(1799deg);
-    transform: rotate(1799deg);
+    -webkit-transform: rotate(5579deg);
+    transform: rotate(5579deg);
   }
   100% {
-    -webkit-transform: rotate(1800deg);
-    transform: rotate(1800deg);
+    -webkit-transform: rotate(5580deg);
+    transform: rotate(5580deg);
+  }
+}
+
+.spinAround4 {
+  -webkit-animation: spin4 6.6s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes spin4 {
+  0% {
+    -webkit-transform: rotate(2109deg);
+    transform: rotate(2109deg);
+  }
+  90% {
+    -webkit-transform: rotate(4105deg);
+    transform: rotate(4105deg);
+  }
+  95% {
+    -webkit-transform: rotate(4094deg);
+    transform: rotate(4094deg);
+  }
+  100% {
+    -webkit-transform: rotate(4095deg);
+    transform: rotate(4095deg);
+  }
+}
+
+.spinAround5 {
+  -webkit-animation: spin5 6.6s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes spin5 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  90% {
+    -webkit-transform: rotate(3610deg);
+    transform: rotate(3610deg);
+  }
+  95% {
+    -webkit-transform: rotate(3599deg);
+    transform: rotate(3599deg);
+  }
+  100% {
+    -webkit-transform: rotate(3600deg);
+    transform: rotate(3600deg);
   }
 }
 
@@ -877,67 +967,5 @@ small {
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-}
-
-.spinAround2 {
-  -webkit-animation: spin2 6.6s;
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-
-@-webkit-keyframes spin2 {
-  0% {
-    -webkit-transform: rotate(3109deg);
-    transform: rotate(3109deg);
-  }
-  90% {
-    -webkit-transform: rotate(6400deg);
-    transform: rotate(6400deg);
-  }
-  95% {
-    -webkit-transform: rotate(6389deg);
-    transform: rotate(6389deg);
-  }
-  100% {
-    -webkit-transform: rotate(6390deg);
-    transform: rotate(6390deg);
-  }
-}
-
-.spinAround3 {
-  -webkit-animation: spin3 6.6s;
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-
-@-webkit-keyframes spin3 {
-  0% {
-    -webkit-transform: rotate(3109deg);
-    transform: rotate(3109deg);
-  }
-  90% {
-    -webkit-transform: rotate(6310deg);
-    transform: rotate(6310deg);
-  }
-  95% {
-    -webkit-transform: rotate(6299deg);
-    transform: rotate(6299deg);
-  }
-  100% {
-    -webkit-transform: rotate(6300deg);
-    transform: rotate(6300deg);
-  }
 }
 /*# sourceMappingURL=styles.css.map */

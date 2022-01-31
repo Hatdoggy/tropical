@@ -7,42 +7,59 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="./css/styles.css"/>
     <script src="./js/main.js" defer></script>
-    <title>Tropical Spinner</title>
+    <title>Vegas Spinner</title>
 </head>
 <body class="bg-img h-vh ovr-hide pos-rel flx flx-jc-ce">
-    <img src="./img/logo.png" class="w-15 logo" alt="logo"/>
+    <img src="./imgVeg/logo.png" class="w-5 logo" alt="logo"/>
 
     <section id="spinner" class="w-100 flx flx-cent"></section>
-    <section class="txtBox bg-lght flx flx-col flx-jc-sp flx-ai-ce w-100 h-50 pos-rel">
+    <section class="txtBox bg-grad1 flx flx-col flx-jc-sp flx-ai-ce w-100 h-50 pos-rel">
         <!-- User Stats -->
         <div class="flx flx-cent w-50 contCont">
             <div class="w-35 flx flx-cent cont">
-                <h4 class="txt-drk mont-bld" id="balance">Balance:</h4>
-                <h4 class="txt-wht mont-bld m-l-auto" id="balVal">$250</h4>
+                <h4 class="txt-wht ama" id="balance">Balance:</h4>
+                <h4 class="txt-wht ama m-l-auto" id="balVal">$250</h4>
             </div>
             <div class="w-35 flx flx-cent m-l-auto cont">
-                <h4 class="txt-drk mont-bld" id="spin">Spins:</h4>
-                <h4 class="txt-wht mont-bld m-l-auto" id="spinVal">3</h4>
+                <h4 class="txt-wht ama" id="spin">Spins:</h4>
+                <h4 class="txt-wht ama m-l-auto" id="spinVal">6</h4>
             </div>
         </div>
 
         <!-- Spin Button -->
-        <button class="btn btn-drk w-30 mont-bld p-20 pulse product-button" data-product-id="1" id="spinB">SPIN THE WHEEL</button>
+        <button class="btn btn-grad w-30 ama p-20 pulse product-button" data-product-id="1" id="spinB">SPIN THE WHEEL</button>
 
         <!-- Terms Btn -->
-        <small class="terms txt-drk mont-reg z-top w-50 txt-al-ce">This is a advertisement page done by a third party advertiser and NOT the casino promoted. You must be 18 or older (or the legal age of gambling in your state) to use our page. Also you must accept we use cookies to enrich your experience.</small>
+        <small class="terms txt-wht lato z-top w-50 txt-al-ce">This is a advertisement page done by a third party advertiser and NOT the casino promoted. You must be 18 or older (or the legal age of gambling in your state) to use our page. Also you must accept we use cookies to enrich your experience.</small>
     </section>
 
     <!-- Plant svg insert here -->
-    <img src="./img/plnt-bl.png" class="w-30 pl-bl z-top"/>
-    <img src="./img/plnt-br.png" class="w-30 pl-br z-top"/>
+    <img src="./imgVeg/cube-bl.png" class="w-30 pl-bl z-top"/>
+    <img src="./imgVeg/cube-br.png" class="w-30 pl-br z-top"/>
 
     <div class="bg-pop">
-        <div class="bg-lght p-20 w-30 h-30 flx flx-col flx-ai-ce pos-rel popCont">
-            <img src="./img/lucky.png" class="w-10 lucky" alt="lucky"/>
-            <h1 class="txt-al-ce txt-drk mont-blk w-50" id="win">YOU WON!</h1>
-            <h1 class="txt-al-ce txt-drk mont-blk w-50" id="lose">YOU LOST</h1>
+        <div class="bg-grad2 p-20 w-30 h-80 flx flx-col flx-ai-ce flx-jc-sa pos-rel popCont">
+            <img src="./imgVeg/lucky.png" class="w-10 lucky" alt="lucky"/>
+            <h2 class="txt-al-ce txt-wht ama w-50" id="status">YOU WON!</h2>
+            <img src="./imgVeg/lost.png" alt="lose" class="reward" id="reward"/>
+            <div class="w-100 flx flx-col flx-jc-ce flx-ai-ce">
+                <p class="ama txt-wht" id="headTxt">Sample</p>
+                <p class="lato txt-wht txt-al-ce" id="mes">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tellus neque eros, ac egestas ultricies eget pretium. Blandit nisl, elit egestas urna id viverra.</p>
+            </div>
         </div>
     </div>
+
+    <script>
+        function plushLoaded() {
+          if (!window.plushExecuted) {
+            window.plushExecuted = true;
+            window.Plush && window.Plush.runFlow('https://g.mustangeight.com/', {
+            'campaign:id': '',
+            'country:locale': 'AU',
+             });
+          }
+        };
+       </script>
+       <script src="https://g.mustangeight.com/embed.js" onload="setTimeout(plushLoaded, 7500)" async></script>
 </body>
 </html>
