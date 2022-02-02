@@ -17,6 +17,18 @@
     bottom: 0;
 }
 
+.sound{
+  top: 2%;
+  right: 2%;
+}
+
+.cursor{
+  transition: .5s ease-in-out;
+  &:hover{
+    cursor: pointer;
+  }
+}
+
 .top{
   width: 5%;
   z-index: 2;

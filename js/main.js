@@ -530,11 +530,19 @@ window.location.replace(
 );
 }
 
+let wheelSound = document.createElement('audio');
+wheelSound.src = './imgVeg/wheel2.mp3';
 let count = 1;
+let mute = 0;
 
 function spin() {
 let wheel = document.querySelector("#spinMe");
 let ret = undefined;
+
+if(!mute){
+  wheelSound.play();
+}
+
 switch (count) {
   case 1:
     wheel.classList.add("spinAround");
@@ -667,6 +675,7 @@ const showPop = async()=>{
   setVal();
   $('.bg-pop').slideToggle('fast');
   $('.popCont').fadeIn('slow');
+  $("#spinB").on('click',clickFunc);
   await delay(1);
   hidePop()
   return new Promise(res=>{
@@ -695,41 +704,70 @@ const clickFunc = ()=>{
   $("#spinB").click(async function() {
 
     $(this).off('click');
-    await spin();
-    $("#spinB").css({
-      visibility:"hidden",
-    });
-    await showPop();
-    await spin();
-    await showPop();
-    await spin();
-    await showPop();
-    await spin();
-    await showPop();
-    await spin();
-    await showPop();
-    await spin();
-    await showPop();
-    $("#spinB").css('visibility', 'visible');
-    blink();
-    newClick();
+
+    if(spinVal === 1){
+      await spin();
+      if(!mute){
+        wheelSound.pause();
+        wheelSound.currentTime = 0;
+      }
+      await showPop();
+      blink();
+      newClick();
+    }else{
+      await spin();
+      if(!mute){
+        wheelSound.pause();
+        wheelSound.currentTime = 0;
+      }
+      await showPop();
+    }
   });
 }
 
+function prefill() {
+  var url_string = window.location.href;
+  var url = new URL(url_string);
+  var sound = url.searchParams.get("sound");
+  if(sound=="muted"){
+      $('.sound').toggleClass('muted');
+      $('.sound').attr('src','./imgVeg/off.png');
+      wheelSound.src = '';
+      mute = 1;
+  }
+}
+
+function soundAdj(){
+  if (mute) {
+    wheelSound.volume = 0.9;
+    $('#mute').toggleClass('muted');
+    $('.sound').attr('src','./imgVeg/on.png');
+    mute = 0;
+  }else{
+    wheelSound.volume = 0;
+    $('#mute').toggleClass('muted');
+    $('.sound').attr('src','./imgVeg/off.png');
+    mute = 1;
+  }
+}
+
 $(async function(){
-$('.popCont').slideToggle('fast')
-$('.bg-pop').hide();
-$('#spinner').append(Wheel());
-clickFunc();
 
-setTimeout(()=>{
-  let height = ($('#spinMe')[0].offsetTop-30)+'px';
-  $('.top').css('top',height);
-},375 )
+  prefill();
+  $('.sound').click(soundAdj);
+  $('.popCont').slideToggle('fast')
+  $('.bg-pop').hide();
+  $('#spinner').append(Wheel());
+  clickFunc();
 
-$(window).on('resize', function(){
-  let height = $('#spinMe')[0].offsetTop-30+'px';
-  $('.top').css('top',height);
-});
+  setTimeout(()=>{
+    let height = ($('#spinMe')[0].offsetTop-30)+'px';
+    $('.top').css('top',height);
+  },375 )
+
+  $(window).on('resize', function(){
+    let height = $('#spinMe')[0].offsetTop-30+'px';
+    $('.top').css('top',height);
+  });
 
 })
